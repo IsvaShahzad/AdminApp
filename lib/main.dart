@@ -4,7 +4,6 @@ import 'Daily Task.dart';
 import 'Redeem Coins.dart';
 import 'SelectionScreen.dart';
 import 'Users.dart';
-/// Flutter code sample for [BottomNavigationBar].
 
 void main() {
   runApp(const BottomNavigationBarExampleApp());
@@ -16,6 +15,7 @@ class BottomNavigationBarExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: BottomNavigationBarExample(),
     );
   }
@@ -57,27 +57,27 @@ class _BottomNavigationBarExampleState
       body: Center(
         child: _widgetOptions().elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.credit_score_rounded),
-            label: 'Daily Task',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.monetization_on_outlined),
-            label: 'Redeem',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Users',
-          ),
-
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        unselectedItemColor:const Color.fromRGBO(0,173,181, 2),
-        onTap: _onItemTapped,
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   items: const <BottomNavigationBarItem>[
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.credit_score_rounded),
+      //       label: 'Daily Task',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.monetization_on_outlined),
+      //       label: 'Redeem',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person),
+      //       label: 'Users',
+      //     ),
+      //   ],
+      //   currentIndex: _selectedIndex,
+      //   selectedItemColor: Colors.amber[800],
+      //   unselectedItemColor: const Color.fromRGBO(0, 173, 181, 2),
+      //   backgroundColor: Colors.white70, // Set the desired background color
+      //   onTap: _onItemTapped,
+      // ),
     );
   }
 }
